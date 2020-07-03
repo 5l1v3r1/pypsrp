@@ -19,7 +19,7 @@ setup(
     include_package_data=True,
     install_requires=[
         'cryptography',
-        'ntlm-auth>=1.2.0',
+        'pyspnego',
         'requests>=2.9.1',
         'six',
     ],
@@ -30,9 +30,7 @@ setup(
         'credssp': [
             'requests-credssp>=1.0.0'
         ],
-        'kerberos:sys_platform=="win32"': [
-            'pywin32'
-        ],
+        'kerberos:sys_platform=="win32"': [],
         'kerberos:sys_platform!="win32"': [
             'gssapi>=1.5.0'
         ]
